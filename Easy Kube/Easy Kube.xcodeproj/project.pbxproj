@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D61D252304C500345DC1 /* IdentityUtil.swift */; };
 		A077090725202B9D00FAC3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077090625202B9D00FAC3CC /* AppDelegate.swift */; };
 		A077090925202B9D00FAC3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077090825202B9D00FAC3CC /* ContentView.swift */; };
 		A077090B25202B9E00FAC3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A077090A25202B9E00FAC3CC /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A061D61D252304C500345DC1 /* IdentityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityUtil.swift; sourceTree = "<group>"; };
 		A077090325202B9D00FAC3CC /* Easy Kube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Kube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A077090625202B9D00FAC3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A077090825202B9D00FAC3CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A061D61F252305A200345DC1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		A07708FA25202B9D00FAC3CC = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +64,10 @@
 		A077090525202B9D00FAC3CC /* Easy Kube */ = {
 			isa = PBXGroup;
 			children = (
+				A061D61F252305A200345DC1 /* Data */,
 				A077090625202B9D00FAC3CC /* AppDelegate.swift */,
 				A077090825202B9D00FAC3CC /* ContentView.swift */,
+				A061D61D252304C500345DC1 /* IdentityUtil.swift */,
 				A077090A25202B9E00FAC3CC /* Assets.xcassets */,
 				A077090F25202B9E00FAC3CC /* Main.storyboard */,
 				A077091225202B9E00FAC3CC /* Info.plist */,
@@ -145,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */,
 				A077090925202B9D00FAC3CC /* ContentView.swift in Sources */,
 				A077090725202B9D00FAC3CC /* AppDelegate.swift in Sources */,
 			);
