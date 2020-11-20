@@ -10,9 +10,6 @@ import SwiftUI
 
 class Terminal {
     
-    
-    
-    
      public static func execute(command:String){
     
     
@@ -40,7 +37,7 @@ class Terminal {
                    let task = Process()
                    task.executableURL = URL(fileURLWithPath: "/usr/bin/open")
                    task.arguments = ["-a", "iTerm", getFilePath()]
-                   //            task.arguments = ["-a", "Terminal", getFilePath()]
+//                   task.arguments = ["-a", "Terminal", getFilePath()]
                    try task.run()
                } catch {
                    print(error)

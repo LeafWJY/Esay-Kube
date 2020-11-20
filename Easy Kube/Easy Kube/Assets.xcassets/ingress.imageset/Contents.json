@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "amscloudappxiaochengxuyunyingyong-2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "amscloudappxiaochengxuyunyingyong-3.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "amscloudappxiaochengxuyunyingyong-4.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

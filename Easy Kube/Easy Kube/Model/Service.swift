@@ -13,6 +13,22 @@ import SwiftUI
 struct ServiceData: Codable,Hashable {
     
     var items: [Service]
+    var rowDatas: [RowData] {
+        var list = [RowData]()
+        for t in items{
+            list.append(
+                RowData(
+                    id: t.id,
+                    objectType: .service,
+                    objectName: t.metadata.name,
+                    objectNamespace: t.metadata.namespace,
+                    objectAge: nil,
+                    objectStatus: t.spec.port
+                )
+            )
+        }
+        return list
+    }
     
 }
 

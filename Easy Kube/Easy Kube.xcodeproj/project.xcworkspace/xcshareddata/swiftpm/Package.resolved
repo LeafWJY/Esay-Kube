@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "HoverAwareView",
+        "repositoryURL": "https://github.com/aerobounce/HoverAwareView",
+        "state": {
+          "branch": null,
+          "revision": "15a65092d354c599c8008b11b0e6065486e63746",
+          "version": "1.1.1"
+        }
+      },
+      {
         "package": "Yams",
         "repositoryURL": "https://github.com/jpsim/Yams.git",
         "state": {

@@ -20,40 +20,39 @@ struct ContentView: View {
     var body: some View {
         HStack(alignment: .top){
             TabView()
-                .padding(.trailing,-8)
+                .padding(.trailing,0)
+//                .background(Color.clear)
             
-            ZStack{
+//            ZStack{
+//                VStack(alignment:.leading){
+//                    Filter()
+//                        .padding(.bottom,-10)
+//                    PodList(pods:[Pod](),selectedPod: $selectedPod)
+//
+//                }.zIndex("Pods" == userData.selectedTab ? 1:0)
                 VStack(alignment:.leading){
                     Filter()
                         .padding(.bottom,-10)
-                    PodList(pods:[Pod](),selectedPod: $selectedPod)
                     
-                }.zIndex("Pod" == userData.selectedTab ? 1:0)
-                
-                VStack(alignment:.leading){
-                    Filter()
-                        .padding(.bottom,-10)
-                    DeployList(deploys:[Deploy](),selectedDeploy: $selectedDeploy)
-                }.zIndex("Deploy" == userData.selectedTab ? 1:0)
-                
-                VStack(alignment:.leading){
-                    Filter()
-                        .padding(.bottom,-10)
-                    NodeList(nodes: [KNode](),selectedNode: $selectedNode)
-                }.zIndex("Node" == userData.selectedTab ? 1:0)
-                
-                
-                VStack(alignment:.leading){
-                    Filter()
-                        .padding(.bottom,-10)
-                    ServiceList(services: [Service](),selectedService: $selectedService)
-                }.zIndex("Service" == userData.selectedTab ? 1:0)
-            }
-            
-            
+                    ZStack{
+                        ListView(rows: [RowData](), objectType: .pod).zIndex("Pods" == userData.selectedTab ? 1:0)
+                        ListView(rows: [RowData](), objectType: .deployment).zIndex("Deployments" == userData.selectedTab ? 1:0)
+                        ListView(rows: [RowData](), objectType: .node).zIndex("Nodes" == userData.selectedTab ? 1:0)
+                        ListView(rows: [RowData](), objectType: .service).zIndex("Services" == userData.selectedTab ? 1:0)
+                        ListView(rows: [RowData](), objectType: .statefulSet).zIndex("StatefulSets" == userData.selectedTab ? 1:0)
+                        ListView(rows: [RowData](), objectType: .ingress).zIndex("Ingresses" == userData.selectedTab ? 1:0)
+                    }
+                    
+                }
+
         }
+//        .background(Color.clear)
         
         
+    }
+    
+    func acceptsFirstMouse(for event: NSEvent?) -> Bool{
+        return true
     }
     
     
@@ -61,15 +60,15 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        var rows = [Pod]()
-        for index in 1...10 {
-            let metadata = PodMetadata(name: "pod name", uid: String(index), namespace: "hippius-dev")
-            let podStatus = PodStatus(phase: "Running", podIP: "10.244.3.190", hostIP: "192.168.16.148", containerStatuses: [PodContainer(ready: true)])
-            let pod = Pod(metadata: metadata, status: podStatus)
-            rows.append(pod)
-        }
-        return ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        var rows = [Pod]()
+//        for index in 1...10 {
+//            let metadata = PodMetadata(name: "pod name", uid: String(index), namespace: "hippius-dev")
+//            let podStatus = PodStatus(phase: "Running", podIP: "10.244.3.190", hostIP: "192.168.16.148", containerStatuses: [PodContainer(ready: true)])
+//            let pod = Pod(metadata: metadata, status: podStatus)
+//            rows.append(pod)
+//        }
+//        return ContentView()
+//    }
+//}

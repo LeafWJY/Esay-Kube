@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ahas.png",
+      "filename" : "ahasyingyonggaokeyong.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ahas-1.png",
+      "filename" : "ahasyingyonggaokeyong-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ahas-2.png",
+      "filename" : "ahasyingyonggaokeyong-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -11,35 +11,58 @@ import SwiftUI
 struct Filter: View {
     @EnvironmentObject private var userData: UserData
     
+    @State var hovered = false
+    
     var body: some View {
         HStack{
             HStack (alignment: .center,
                     spacing: 10) {
                         Image("filter")
                             .resizable()
-                            .frame(width: 25, height: 25, alignment: .center)
-                            .padding([.leading], 22)
-                        TextField ("搜索\(userData.selectedTab)", text: $userData.filterKey)
-                            .foregroundColor(Color.blue)
+                            .frame(width: 15, height: 15, alignment: .center)
+                            .padding(.leading,10)
+                TextField("Search \(userData.selectedTab)", text: $userData.filterKey, onEditingChanged: textChange, onCommit: textCommit)
+//                        TextField ("Search \(userData.selectedTab)", text: $userData.filterKey,onEditchan)
+//                            .foregroundColor(Color.black)
                             .textFieldStyle(PlainTextFieldStyle())
-            }
-            .padding([.top], 20)
-            .padding(.bottom,10)
-            .background(Color.white.opacity(0.1), alignment: .center)
+                            
+                            
+            }.frame(width: 200, height: 32, alignment: .center)
+            .background(hovered ? Color.white : Color.gray.opacity(0.15) )
+            .cornerRadius(16)
+//            .onHoverAware(hover)
+//            .background(Color(hex:0xf6f6f6), alignment: .center)
+            Spacer()
         }
+        .padding([.leading], 16)
+        .padding([.top], 15)
+        .padding(.bottom,15)
+         .background(Color(hex:0xf6f6f6), alignment: .center)
+    }
+    
+    
+    func hover(_ hover:Bool){
+//        withAnimation{
+        self.hovered = hover
+        
+    }
+    
+    func textChange( change : Bool){
+        
+        print("change")
+    }
+    
+    func textCommit(){
+        
+        print("change")
     }
 }
 
-extension NSTextField {
-    open override var focusRingType: NSFocusRingType {
-        get { .none }
-        set { }
-    }
-}
 
 
-struct Filter_Previews: PreviewProvider {
-    static var previews: some View {
-        Filter()
-    }
-}
+//
+//struct Filter_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Filter()
+//    }
+//}

@@ -9,7 +9,23 @@
 
 
 struct DeployData: Codable,Hashable {
-   var items:[Deploy]
+    var items:[Deploy]
+    var rowDatas: [RowData] {
+        var list = [RowData]()
+        for t in items{
+            list.append(
+                RowData(
+                    id: t.id,
+                    objectType: .deployment,
+                    objectName: t.metadata.name,
+                    objectNamespace: t.metadata.namespace,
+                    objectAge: nil,
+                    objectStatus: t.status.ready
+                )
+            )
+        }
+        return list
+    }
 }
 
 

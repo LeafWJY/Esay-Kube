@@ -17,15 +17,12 @@
 		A05CE86C2524320100075FEC /* PodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86B2524320100075FEC /* PodRow.swift */; };
 		A05CE86E25244C0C00075FEC /* PodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86D25244C0C00075FEC /* PodList.swift */; };
 		A05CE87025244E6000075FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86F25244E6000075FEC /* ContentView.swift */; };
-		A05CE872252452E500075FEC /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE871252452E500075FEC /* LogView.swift */; };
-		A05CE87425246ED300075FEC /* log.txt in Resources */ = {isa = PBXBuildFile; fileRef = A05CE87325246ED300075FEC /* log.txt */; };
 		A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D61D252304C500345DC1 /* IdentityUtil.swift */; };
 		A061D62425230A2900345DC1 /* KNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D62325230A2900345DC1 /* KNode.swift */; };
 		A061D62725230A6400345DC1 /* NodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D62625230A6400345DC1 /* NodeRow.swift */; };
 		A061D629252316B900345DC1 /* NodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D628252316B900345DC1 /* NodeList.swift */; };
 		A061D62D252336BF00345DC1 /* ClientCertificateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D62C252336BF00345DC1 /* ClientCertificateDelegate.swift */; };
 		A077090725202B9D00FAC3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077090625202B9D00FAC3CC /* AppDelegate.swift */; };
-		A077090925202B9D00FAC3CC /* NodeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077090825202B9D00FAC3CC /* NodeContentView.swift */; };
 		A077090B25202B9E00FAC3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A077090A25202B9E00FAC3CC /* Assets.xcassets */; };
 		A077090E25202B9E00FAC3CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A077090D25202B9E00FAC3CC /* Preview Assets.xcassets */; };
 		A077091125202B9E00FAC3CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A077090F25202B9E00FAC3CC /* Main.storyboard */; };
@@ -33,10 +30,15 @@
 		A07DD9F925343F2200BA0F33 /* Deployment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9F825343F2200BA0F33 /* Deployment.swift */; };
 		A07DD9FB2534415C00BA0F33 /* DeployRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9FA2534415C00BA0F33 /* DeployRow.swift */; };
 		A07DD9FD2534444500BA0F33 /* DeployList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9FC2534444500BA0F33 /* DeployList.swift */; };
-		A09AA1A325344A8E0064943B /* DeployContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09AA1A225344A8E0064943B /* DeployContentView.swift */; };
+		A0CDCED525401B3600747208 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCED425401B3600747208 /* CellData.swift */; };
+		A0CDCED82540271E00747208 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCED72540271E00747208 /* RowView.swift */; };
+		A0CDCEDB2540282800747208 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCEDA2540282800747208 /* ListView.swift */; };
+		A0F18CD52539832000905BD4 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F18CD42539832000905BD4 /* ButtonView.swift */; };
 		A0FAD6A625319095003CB26F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAD6A525319095003CB26F /* Style.swift */; };
 		A0FAD6A82531A556003CB26F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAD6A72531A556003CB26F /* Filter.swift */; };
 		A0FAD6AA2531BAB8003CB26F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAD6A92531BAB8003CB26F /* UserData.swift */; };
+		A0FBE610253DE0CA0043C7E7 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FBE60F253DE0CA0043C7E7 /* RestService.swift */; };
+		A0FBE614253DEE760043C7E7 /* HoverAwareView in Frameworks */ = {isa = PBXBuildFile; productRef = A0FBE613253DEE760043C7E7 /* HoverAwareView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +51,6 @@
 		A05CE86B2524320100075FEC /* PodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodRow.swift; sourceTree = "<group>"; };
 		A05CE86D25244C0C00075FEC /* PodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodList.swift; sourceTree = "<group>"; };
 		A05CE86F25244E6000075FEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A05CE871252452E500075FEC /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
-		A05CE87325246ED300075FEC /* log.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log.txt; sourceTree = "<group>"; };
 		A061D61D252304C500345DC1 /* IdentityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityUtil.swift; sourceTree = "<group>"; };
 		A061D62325230A2900345DC1 /* KNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNode.swift; sourceTree = "<group>"; };
 		A061D62625230A6400345DC1 /* NodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRow.swift; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 		A061D62C252336BF00345DC1 /* ClientCertificateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCertificateDelegate.swift; sourceTree = "<group>"; };
 		A077090325202B9D00FAC3CC /* Easy Kube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Kube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A077090625202B9D00FAC3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A077090825202B9D00FAC3CC /* NodeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeContentView.swift; sourceTree = "<group>"; };
 		A077090A25202B9E00FAC3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A077090D25202B9E00FAC3CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A077091025202B9E00FAC3CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,10 +67,14 @@
 		A07DD9F825343F2200BA0F33 /* Deployment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deployment.swift; sourceTree = "<group>"; };
 		A07DD9FA2534415C00BA0F33 /* DeployRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeployRow.swift; sourceTree = "<group>"; };
 		A07DD9FC2534444500BA0F33 /* DeployList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeployList.swift; sourceTree = "<group>"; };
-		A09AA1A225344A8E0064943B /* DeployContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeployContentView.swift; sourceTree = "<group>"; };
+		A0CDCED425401B3600747208 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		A0CDCED72540271E00747208 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		A0CDCEDA2540282800747208 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		A0F18CD42539832000905BD4 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		A0FAD6A525319095003CB26F /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		A0FAD6A72531A556003CB26F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		A0FAD6A92531BAB8003CB26F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A0FBE60F253DE0CA0043C7E7 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,26 +83,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01446B9253596EA0048A781 /* Yams in Frameworks */,
+				A0FBE614253DEE760043C7E7 /* HoverAwareView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A020A844253578FC00817BD5 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
 		A061D61F252305A200345DC1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A05CE87325246ED300075FEC /* log.txt */,
 				A061D61D252304C500345DC1 /* IdentityUtil.swift */,
 				A061D62C252336BF00345DC1 /* ClientCertificateDelegate.swift */,
 				A020A8422535748000817BD5 /* Terminal.swift */,
+				A0FBE60F253DE0CA0043C7E7 /* RestService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -113,6 +110,7 @@
 				A07DD9F825343F2200BA0F33 /* Deployment.swift */,
 				A020A83C25354EAE00817BD5 /* Service.swift */,
 				A012F3FC2535A7F6005EA1E8 /* KubeConfig.swift */,
+				A0CDCED425401B3600747208 /* CellData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,21 +118,14 @@
 		A061D62525230A4800345DC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A061D62625230A6400345DC1 /* NodeRow.swift */,
-				A061D628252316B900345DC1 /* NodeList.swift */,
-				A077090825202B9D00FAC3CC /* NodeContentView.swift */,
-				A05CE86B2524320100075FEC /* PodRow.swift */,
-				A05CE86D25244C0C00075FEC /* PodList.swift */,
+				A0CDCEDD2540911D00747208 /* trash */,
 				A05CE86F25244E6000075FEC /* ContentView.swift */,
-				A05CE871252452E500075FEC /* LogView.swift */,
+				A07DD9F625342A1200BA0F33 /* TabView.swift */,
+				A0F18CD42539832000905BD4 /* ButtonView.swift */,
 				A0FAD6A525319095003CB26F /* Style.swift */,
 				A0FAD6A72531A556003CB26F /* Filter.swift */,
-				A07DD9F625342A1200BA0F33 /* TabView.swift */,
-				A07DD9FA2534415C00BA0F33 /* DeployRow.swift */,
-				A07DD9FC2534444500BA0F33 /* DeployList.swift */,
-				A09AA1A225344A8E0064943B /* DeployContentView.swift */,
-				A020A83E2535529900817BD5 /* ServiceRow.swift */,
-				A020A840253554A800817BD5 /* ServiceList.swift */,
+				A0CDCED72540271E00747208 /* RowView.swift */,
+				A0CDCEDA2540282800747208 /* ListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,7 +149,6 @@
 		A077090525202B9D00FAC3CC /* Easy Kube */ = {
 			isa = PBXGroup;
 			children = (
-				A020A844253578FC00817BD5 /* Lib */,
 				A061D62525230A4800345DC1 /* View */,
 				A061D62225230A1300345DC1 /* Model */,
 				A061D61F252305A200345DC1 /* Data */,
@@ -180,6 +170,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A0CDCEDD2540911D00747208 /* trash */ = {
+			isa = PBXGroup;
+			children = (
+				A061D62625230A6400345DC1 /* NodeRow.swift */,
+				A061D628252316B900345DC1 /* NodeList.swift */,
+				A05CE86B2524320100075FEC /* PodRow.swift */,
+				A05CE86D25244C0C00075FEC /* PodList.swift */,
+				A07DD9FA2534415C00BA0F33 /* DeployRow.swift */,
+				A07DD9FC2534444500BA0F33 /* DeployList.swift */,
+				A020A83E2535529900817BD5 /* ServiceRow.swift */,
+				A020A840253554A800817BD5 /* ServiceList.swift */,
+			);
+			path = trash;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +203,7 @@
 			name = "Easy Kube";
 			packageProductDependencies = (
 				A01446B8253596EA0048A781 /* Yams */,
+				A0FBE613253DEE760043C7E7 /* HoverAwareView */,
 			);
 			productName = "Easy Kube";
 			productReference = A077090325202B9D00FAC3CC /* Easy Kube.app */;
@@ -210,7 +216,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = codewjy;
 				TargetAttributes = {
 					A077090225202B9D00FAC3CC = {
@@ -229,6 +235,7 @@
 			mainGroup = A07708FA25202B9D00FAC3CC;
 			packageReferences = (
 				A01446B7253596EA0048A781 /* XCRemoteSwiftPackageReference "Yams" */,
+				A0FBE612253DEE760043C7E7 /* XCRemoteSwiftPackageReference "HoverAwareView" */,
 			);
 			productRefGroup = A077090425202B9D00FAC3CC /* Products */;
 			projectDirPath = "";
@@ -247,7 +254,6 @@
 				A077091125202B9E00FAC3CC /* Main.storyboard in Resources */,
 				A077090E25202B9E00FAC3CC /* Preview Assets.xcassets in Resources */,
 				A077090B25202B9E00FAC3CC /* Assets.xcassets in Resources */,
-				A05CE87425246ED300075FEC /* log.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,26 +266,28 @@
 			files = (
 				A012F3FD2535A7F6005EA1E8 /* KubeConfig.swift in Sources */,
 				A061D62725230A6400345DC1 /* NodeRow.swift in Sources */,
-				A05CE872252452E500075FEC /* LogView.swift in Sources */,
+				A0FBE610253DE0CA0043C7E7 /* RestService.swift in Sources */,
 				A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */,
 				A0FAD6AA2531BAB8003CB26F /* UserData.swift in Sources */,
 				A061D62D252336BF00345DC1 /* ClientCertificateDelegate.swift in Sources */,
-				A09AA1A325344A8E0064943B /* DeployContentView.swift in Sources */,
 				A020A841253554A800817BD5 /* ServiceList.swift in Sources */,
 				A020A83F2535529900817BD5 /* ServiceRow.swift in Sources */,
+				A0F18CD52539832000905BD4 /* ButtonView.swift in Sources */,
 				A07DD9FB2534415C00BA0F33 /* DeployRow.swift in Sources */,
 				A05CE87025244E6000075FEC /* ContentView.swift in Sources */,
 				A020A83D25354EAE00817BD5 /* Service.swift in Sources */,
 				A07DD9F925343F2200BA0F33 /* Deployment.swift in Sources */,
 				A0FAD6A625319095003CB26F /* Style.swift in Sources */,
-				A077090925202B9D00FAC3CC /* NodeContentView.swift in Sources */,
 				A0FAD6A82531A556003CB26F /* Filter.swift in Sources */,
+				A0CDCED525401B3600747208 /* CellData.swift in Sources */,
 				A077090725202B9D00FAC3CC /* AppDelegate.swift in Sources */,
 				A07DD9F725342A1200BA0F33 /* TabView.swift in Sources */,
 				A07DD9FD2534444500BA0F33 /* DeployList.swift in Sources */,
 				A05CE86E25244C0C00075FEC /* PodList.swift in Sources */,
 				A05CE86C2524320100075FEC /* PodRow.swift in Sources */,
+				A0CDCED82540271E00747208 /* RowView.swift in Sources */,
 				A061D62425230A2900345DC1 /* KNode.swift in Sources */,
+				A0CDCEDB2540282800747208 /* ListView.swift in Sources */,
 				A020A8432535748000817BD5 /* Terminal.swift in Sources */,
 				A061D629252316B900345DC1 /* NodeList.swift in Sources */,
 				A05CE86A25242DAF00075FEC /* Pod.swift in Sources */,
@@ -326,6 +334,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -386,6 +395,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -418,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Easy Kube/Easy_Kube.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Easy Kube/Preview Content\"";
@@ -441,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Easy Kube/Easy_Kube.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Easy Kube/Preview Content\"";
@@ -491,6 +503,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		A0FBE612253DEE760043C7E7 /* XCRemoteSwiftPackageReference "HoverAwareView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aerobounce/HoverAwareView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -498,6 +518,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A01446B7253596EA0048A781 /* XCRemoteSwiftPackageReference "Yams" */;
 			productName = Yams;
+		};
+		A0FBE613253DEE760043C7E7 /* HoverAwareView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0FBE612253DEE760043C7E7 /* XCRemoteSwiftPackageReference "HoverAwareView" */;
+			productName = HoverAwareView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
