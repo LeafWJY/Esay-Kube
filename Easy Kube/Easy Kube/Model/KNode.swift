@@ -14,16 +14,34 @@ struct NodeData: Codable,Hashable {
     
     var items: [KNode]
     
+    var rowDatas: [RowData] {
+        var list = [RowData]()
+        for t in items{
+            list.append(
+                RowData(
+                    id: t.id,
+                    objectType: .node,
+                    objectName: t.metadata.name,
+                    objectNamespace: nil,
+                    objectAge: nil,
+                    objectStatus: t.status.ready ? "Ready" : "NotReady"
+                )
+            )
+        }
+        return list
+    }
+    
 }
 
 struct KNode: Codable,Identifiable,Hashable {
-    
 
     var metadata: NodeMetadata
     var status: NodeStatus
     var id: String {
         return metadata.uid
     }
+
+   
     
 }
 

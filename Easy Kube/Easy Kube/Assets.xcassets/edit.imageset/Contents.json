@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bianji3-3.png",
+      "filename" : "edit1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bianji3-4.png",
+      "filename" : "edit1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bianji3-2.png",
+      "filename" : "edit1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

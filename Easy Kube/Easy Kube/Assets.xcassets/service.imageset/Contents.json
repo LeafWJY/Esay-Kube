@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "slbfuzaijunhengSLB.png",
+      "filename" : "slbfuzaijunheng.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "slbfuzaijunhengSLB-1.png",
+      "filename" : "slbfuzaijunheng-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "slbfuzaijunhengSLB-2.png",
+      "filename" : "slbfuzaijunheng-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

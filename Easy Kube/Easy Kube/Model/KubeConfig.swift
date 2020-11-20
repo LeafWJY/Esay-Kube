@@ -11,7 +11,7 @@ import SwiftUI
 struct KubeConfig: Codable {
     var apiVersion: String
     var clusters: [Cluster]
-    var contexts:[Context]
+    var contexts:[KContext]
     var currentContext:String
     var kind: String
     var users:[User]
@@ -45,7 +45,7 @@ struct ClusterInfo: Codable {
        }
 }
 
-struct Context: Codable {
+struct KContext: Codable {
     var context: ContextInfo
     var name: String
    
