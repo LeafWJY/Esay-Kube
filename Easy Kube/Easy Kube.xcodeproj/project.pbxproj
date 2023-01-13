@@ -16,7 +16,6 @@
 		A05CE86A25242DAF00075FEC /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86925242DAF00075FEC /* Pod.swift */; };
 		A05CE86C2524320100075FEC /* PodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86B2524320100075FEC /* PodRow.swift */; };
 		A05CE86E25244C0C00075FEC /* PodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86D25244C0C00075FEC /* PodList.swift */; };
-		A05CE87025244E6000075FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86F25244E6000075FEC /* ContentView.swift */; };
 		A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D61D252304C500345DC1 /* IdentityUtil.swift */; };
 		A061D62425230A2900345DC1 /* KNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D62325230A2900345DC1 /* KNode.swift */; };
 		A061D62725230A6400345DC1 /* NodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061D62625230A6400345DC1 /* NodeRow.swift */; };
@@ -30,6 +29,10 @@
 		A07DD9F925343F2200BA0F33 /* Deployment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9F825343F2200BA0F33 /* Deployment.swift */; };
 		A07DD9FB2534415C00BA0F33 /* DeployRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9FA2534415C00BA0F33 /* DeployRow.swift */; };
 		A07DD9FD2534444500BA0F33 /* DeployList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD9FC2534444500BA0F33 /* DeployList.swift */; };
+		A08DEBE7272DA3F400B4E754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CE86F25244E6000075FEC /* ContentView.swift */; };
+		A0A2809F25889FA0005AF06A /* NSViewAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2809E25889FA0005AF06A /* NSViewAccessor.swift */; };
+		A0CB3AEB2970F01400205921 /* IngressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB3AEA2970F01400205921 /* IngressData.swift */; };
+		A0CB3AED2970F6AE00205921 /* StatefulSetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB3AEC2970F6AE00205921 /* StatefulSetData.swift */; };
 		A0CDCED525401B3600747208 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCED425401B3600747208 /* CellData.swift */; };
 		A0CDCED82540271E00747208 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCED72540271E00747208 /* RowView.swift */; };
 		A0CDCEDB2540282800747208 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDCEDA2540282800747208 /* ListView.swift */; };
@@ -67,6 +70,9 @@
 		A07DD9F825343F2200BA0F33 /* Deployment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deployment.swift; sourceTree = "<group>"; };
 		A07DD9FA2534415C00BA0F33 /* DeployRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeployRow.swift; sourceTree = "<group>"; };
 		A07DD9FC2534444500BA0F33 /* DeployList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeployList.swift; sourceTree = "<group>"; };
+		A0A2809E25889FA0005AF06A /* NSViewAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewAccessor.swift; sourceTree = "<group>"; };
+		A0CB3AEA2970F01400205921 /* IngressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngressData.swift; sourceTree = "<group>"; };
+		A0CB3AEC2970F6AE00205921 /* StatefulSetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulSetData.swift; sourceTree = "<group>"; };
 		A0CDCED425401B3600747208 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 		A0CDCED72540271E00747208 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		A0CDCEDA2540282800747208 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 				A020A83C25354EAE00817BD5 /* Service.swift */,
 				A012F3FC2535A7F6005EA1E8 /* KubeConfig.swift */,
 				A0CDCED425401B3600747208 /* CellData.swift */,
+				A0CB3AEA2970F01400205921 /* IngressData.swift */,
+				A0CB3AEC2970F6AE00205921 /* StatefulSetData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				A0FAD6A72531A556003CB26F /* Filter.swift */,
 				A0CDCED72540271E00747208 /* RowView.swift */,
 				A0CDCEDA2540282800747208 /* ListView.swift */,
+				A0A2809E25889FA0005AF06A /* NSViewAccessor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,15 +275,16 @@
 			files = (
 				A012F3FD2535A7F6005EA1E8 /* KubeConfig.swift in Sources */,
 				A061D62725230A6400345DC1 /* NodeRow.swift in Sources */,
+				A08DEBE7272DA3F400B4E754 /* ContentView.swift in Sources */,
 				A0FBE610253DE0CA0043C7E7 /* RestService.swift in Sources */,
 				A061D61E252304C500345DC1 /* IdentityUtil.swift in Sources */,
 				A0FAD6AA2531BAB8003CB26F /* UserData.swift in Sources */,
 				A061D62D252336BF00345DC1 /* ClientCertificateDelegate.swift in Sources */,
+				A0A2809F25889FA0005AF06A /* NSViewAccessor.swift in Sources */,
 				A020A841253554A800817BD5 /* ServiceList.swift in Sources */,
 				A020A83F2535529900817BD5 /* ServiceRow.swift in Sources */,
 				A0F18CD52539832000905BD4 /* ButtonView.swift in Sources */,
 				A07DD9FB2534415C00BA0F33 /* DeployRow.swift in Sources */,
-				A05CE87025244E6000075FEC /* ContentView.swift in Sources */,
 				A020A83D25354EAE00817BD5 /* Service.swift in Sources */,
 				A07DD9F925343F2200BA0F33 /* Deployment.swift in Sources */,
 				A0FAD6A625319095003CB26F /* Style.swift in Sources */,
@@ -283,8 +293,10 @@
 				A077090725202B9D00FAC3CC /* AppDelegate.swift in Sources */,
 				A07DD9F725342A1200BA0F33 /* TabView.swift in Sources */,
 				A07DD9FD2534444500BA0F33 /* DeployList.swift in Sources */,
+				A0CB3AED2970F6AE00205921 /* StatefulSetData.swift in Sources */,
 				A05CE86E25244C0C00075FEC /* PodList.swift in Sources */,
 				A05CE86C2524320100075FEC /* PodRow.swift in Sources */,
+				A0CB3AEB2970F01400205921 /* IngressData.swift in Sources */,
 				A0CDCED82540271E00747208 /* RowView.swift in Sources */,
 				A061D62425230A2900345DC1 /* KNode.swift in Sources */,
 				A0CDCEDB2540282800747208 /* ListView.swift in Sources */,
@@ -443,6 +455,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wjy.Easy-Kube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -467,6 +480,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wjy.Easy-Kube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

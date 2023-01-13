@@ -20,16 +20,9 @@ struct ContentView: View {
     var body: some View {
         HStack(alignment: .top){
             TabView()
-                .padding(.trailing,0)
+//                .padding(.trailing,120)
 //                .background(Color.clear)
-            
-//            ZStack{
-//                VStack(alignment:.leading){
-//                    Filter()
-//                        .padding(.bottom,-10)
-//                    PodList(pods:[Pod](),selectedPod: $selectedPod)
-//
-//                }.zIndex("Pods" == userData.selectedTab ? 1:0)
+
                 VStack(alignment:.leading){
                     Filter()
                         .padding(.bottom,-10)
@@ -43,7 +36,7 @@ struct ContentView: View {
                         ListView(rows: [RowData](), objectType: .ingress).zIndex("Ingresses" == userData.selectedTab ? 1:0)
                     }
                     
-                }
+                }.padding(.leading,-9)
 
         }
 //        .background(Color.clear)

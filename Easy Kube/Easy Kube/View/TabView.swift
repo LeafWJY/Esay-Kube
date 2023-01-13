@@ -50,7 +50,8 @@ struct TabView: View {
                         .frame(width: 34, height: 34)
                 })
                 .buttonStyle(PlainButtonStyle())
-            }.padding(10)
+            }
+            .padding(10)
           
         }.frame(width:165)
 //            .background(Color(hex:0xf0f0f0))

@@ -47,7 +47,6 @@ class IdentityUtil{
             let decoder = YAMLDecoder()
             let kubeconfig = try decoder.decode(KubeConfig.self, from: configStr)
             
-            //            let current = kubeconfig.currentContext
             var currentCluster = ""
             var currentUser = ""
             for context in kubeconfig.contexts{
@@ -63,8 +62,6 @@ class IdentityUtil{
                     break;
                 }
             }
-
-            
             for user in kubeconfig.users{
                 if user.name == currentUser{
                     currentClientCertificate = convertData(data: user.user.clientCertificateData)
@@ -72,8 +69,6 @@ class IdentityUtil{
                     break;
                 }
             }
-            
-//            print(currentClientKey)
             
         } catch {
             print(error)

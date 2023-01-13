@@ -31,6 +31,11 @@ struct ListView: View {
             }
         }.frame(minWidth: 600, minHeight: 400)
         .onAppear(perform: startTimer)
+//        .onNSView(added: {nsview in
+//            let root = nsview.subviews[0] as! NSScrollView
+//            root.hasVerticalScroller = false
+//            root.hasHorizontalScroller = false
+//          })
         
     }
     
@@ -51,17 +56,17 @@ struct ListView: View {
         var  request: URLRequest
         switch type {
         case .pod:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/api/v1/pods")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/api/v1/pods")!)
         case .deployment:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/apis/apps/v1beta2/deployments")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/apis/apps/v1/deployments")!)
         case .node:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/api/v1/nodes")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/api/v1/nodes")!)
         case .service:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/api/v1/services")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/api/v1/services")!)
         case .ingress:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/apis/networking.k8s.io/v1beta1/ingresses")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/apis/networking.k8s.io/v1/ingresses")!)
         case .statefulSet:
-            request = URLRequest(url: URL(string: "https://192.168.16.143:8443/apis/apps/v1beta2/statefulsets")!)
+            request = URLRequest(url: URL(string: "https://192.168.16.144:6443/apis/apps/v1/statefulsets")!)
         default:
             return
         }
@@ -81,9 +86,9 @@ struct ListView: View {
                         case .service:
                             rowData = try JSONDecoder().decode(ServiceData.self, from: data).rowDatas
                         case .ingress:
-                            return
+                            rowData = try JSONDecoder().decode(IngressData.self, from: data).rowDatas
                         case .statefulSet:
-                            return
+                            rowData = try JSONDecoder().decode(StatefulSetData.self, from: data).rowDatas
                         default:
                             return
                         }

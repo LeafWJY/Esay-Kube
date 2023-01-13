@@ -11,7 +11,7 @@ import SwiftUI
 
 //import Yaml
 
-import Yams
+//import Yams
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

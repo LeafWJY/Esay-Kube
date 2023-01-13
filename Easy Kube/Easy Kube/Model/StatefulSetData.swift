@@ -1,26 +1,25 @@
 //
-//  Pod.swift
+//  StatefulSetData.swift
 //  Easy Kube
 //
-//  Created by 王镓耀 on 2020/9/30.
-//  Copyright © 2020 codewjy. All rights reserved.
+//  Created by 王镓耀 on 2023/1/13.
+//  Copyright © 2023 codewjy. All rights reserved.
 //
-
 import Foundation
 
-struct PodData: Codable,Hashable {
-    var items:[Pod]
+struct StatefulSetData: Codable,Hashable {
+    var items:[StatefulSet]
     var rowDatas: [RowData] {
         var list = [RowData]()
         for t in items{
             list.append(
                 RowData(
                     id: t.id,
-                    objectType: .pod,
+                    objectType: .deployment,
                     objectName: t.metadata.name,
                     objectNamespace: t.metadata.namespace,
                     objectAge: t.metadata.age,
-                    objectStatus: "\(t.status.status) \(t.status.ready)"
+                    objectStatus: t.status.ready
                 )
             )
         }
@@ -29,22 +28,19 @@ struct PodData: Codable,Hashable {
 }
 
 
-
-struct Pod: Codable,Hashable,Identifiable{
-    
-    
-    var metadata:PodMetadata
-    var status:PodStatus
+struct StatefulSet: Codable,Hashable,Identifiable {
+    var metadata:StatefulSetMetadata
+    var status:StatefulSetStatus
     var id: String {
            return metadata.uid
        }
 }
 
-struct PodMetadata: Codable,Hashable {
+struct StatefulSetMetadata: Codable,Hashable {
     var name:String
     var uid:String
     var namespace:String
-    var creationTimestamp:String
+    var creationTimestamp: String
     var age:String {
         let formatter = DateFormatter()
         formatter.locale = Locale.init(identifier: "zh_CN")
@@ -64,36 +60,11 @@ struct PodMetadata: Codable,Hashable {
         }
     }
 }
-struct PodStatus: Codable,Hashable {
-    var phase:String
-    var podIP:String?
-    var hostIP:String?
-    var containerStatuses:[PodContainer]?
-    var status:String{
-        if(phase == "Succeeded"){
-            return "Completed"
-        }else{
-            return phase
-        }
-    }
+struct StatefulSetStatus: Codable,Hashable {
+    var replicas:Int?
+    var readyReplicas:Int?
     var ready:String{
-        var readCount:Int = 0
-        var totalCount:Int = 0
-        if ( containerStatuses != nil){
-            for container in containerStatuses! {
-                if container.ready{
-                    readCount+=1
-                }
-            }
-            totalCount = containerStatuses!.count
-        }
-        
-        return "\(readCount) / \(totalCount)"
+        return "\(readyReplicas == nil ? 0:readyReplicas!) / \(replicas == nil ? 0:replicas!)"
     }
 }
-
-struct PodContainer: Codable,Hashable {
-    var ready: Bool
-}
-
 
